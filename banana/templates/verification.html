@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <import design.css />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification</title>
+
+    <style>
+{% load static %}
+    .back_img{
+        background-image : url("{% static "img/back.jpeg" %}");
+        background-repeat : no-repeat;
+        background-size : cover;
+        width : 100%;
+        height : 700px;
+
+    }
+
+    .login_back {
+        {% comment %} background: #f8f8f8; {% endcomment %}
+        padding: 90px 20px;
+    }
+    .gradtext {
+        background: #ff4d00;
+        background: -webkit-linear-gradient(left, #ffbf00, #ff4d00);
+        background:    -moz-linear-gradient(right, #ffbf00, #ff4d00);
+        background:      -o-linear-gradient(right, #ffbf00, #ff4d00);
+        background:         linear-gradient(to right, #ffbf00, #ff4d00);
+        -webkit-background-clip: text;
+                background-clip: text;
+        color: transparent;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #login-form > div {
+        margin: 15px 0;
+    }
+    textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
+        border-color: rgba(229, 103, 23, 0.8);
+        box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+        outline: 0 none;
+    }
+
+
+</style>
+</head>
+
+<body>
+    {% comment %} verification page {% endcomment %}
+            {% if messages %}
+            {% for mes in messages %}
+            {{ mes.tag }}
+            {{ mes.message }}
+            {% endfor %}
+            {% endif %}
+    <div class="back_img" >
+        <br /><br />
+        <div class="container login_back" style="background: white; border:1px soild white; border-radius : 10px; box-shadow : 1px 1px 2px 2px #e6e6e6;">
+        <div class="row text-center" style="padding : 50px;">
+        <div style="width: 100%; float:none; margin:0 auto; text-align : center;" >
+            {% comment %} <img src={% static 'img/mango.png'%} style="width: 45px;"/> {% endcomment %}
+            <span class="gradtext">APPLEMANGO</span>
+        <div>
+    </div>
+            <div class="panel panel-success wrap">  
+                <div class="panel-body" >
+                <form action="{% url 'verification' %}" method="POST">
+                        {% csrf_token %}
+                        <input type="text" class="form-control" name="useranme" placeholder="카카오 프로필이름">
+                        <br />
+                        <input type="email" class="form-control" name="email" id="" placeholder="카카오 가입 email주소">
+                        <br />
+                        <input type="submit" name="ok" value="인증하기" class="form-control btn btn-warning" style="color : white">
+                    </form>
+
+                </div> 
+            </div>
+        </div>
+    </div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

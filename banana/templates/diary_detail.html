@@ -1,0 +1,13 @@
+title: {{diary.title}} <br>
+date: {{diary.date}} <br>
+situation: {{diary.situation}} <br>
+emotion: {{diary.emotion}} <br>
+other: {{diary.other}} <br>
+score: {{diary.score}} <br>
+detail: {{diary.detail}} <br>
+author: {{diary.author}} <br>
+
+<form action="{% url 'diary_delete' diary.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" name="delete" value="삭제">
+</form>

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	{% load static %}
+    <meta charset="utf-8" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- CSS Files -->
+    <link href="{% static 'assets2/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets2/css/now-ui-dashboard.css?v=1.5.0' %}" rel="stylesheet" />
+    <link href="{% static 'assets2/demo/demo.css' %}" rel="stylesheet" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    
+    
+    <script src="{% static 'assets2/js/core/jquery.min.js'%}"></script>
+    <script src="{% static 'assets2/js/core/popper.min.js'%}"></script>
+    <script src="{% static 'assets2/js/core/bootstrap.min.js'%}"></script>
+    <script src="{% static 'assets2/js/plugins/perfect-scrollbar.jquery.min.js'%}"></script>
+    <script src="{% static 'assets2/js/plugins/bootstrap-notify.js'%}"></script>
+    <script src="{% static 'assets2/js/core/bootstrap.min.js'%}"></script>
+    <script src="{% static 'assets2/js/now-ui-dashboard.min.js?v=1.5.0'%}"></script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+ 
+    <link href="{% static 'bootstrap3/css/bootstrap.css' %}" rel="stylesheet" />
+	<link href="{% static 'assets/css/gsdk.css' %}" rel="stylesheet" />   
+    <link href="{% static 'assets/css/demo.css' %}" rel="stylesheet" />   
+    
+    <!--     Font Awesome     -->
+    <link href="{% static 'bootstrap3/css/font-awesome.css' %}" rel="stylesheet" />   
+     <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+    <import design.css />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="{% static 'jquery/jquery-1.10.2.js' %}" rel="text/javascript" />   
+    <link href="{% static 'assets/js/jquery-ui-1.10.4.custom.min.js' %}" rel="text/javascript" />   
+    <link href="{% static 'assets/js/gsdk-checkbox.js' %}" rel="text/javascript" />   
+    <link href="{% static 'assets/js/gsdk-radio.js' %}" rel="text/javascript" />   
+    <link href="{% static 'assets/js/gsdk-bootstrapswitch.js' %}" rel="text/javascript" />   
+    <link href="{% static 'assets/js/get-shit-done.js' %}" rel="text/javascript" />   
+    <link href="{% static 'assets/js/custom.js' %}" rel="text/javascript" />   
+
+    <title>Document</title>
+</head>
+
+<style>
+{% load static %}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+color : black;
+  display: block;
+  
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: orange;
+}
+
+.active {
+    color : white;
+  background-color: black;
+}
+
+pre.prettyprint{
+    background-color: #ffffff;
+    border: 1px solid #999; 
+    margin-top: 20px;
+    padding: 20px;
+    text-align: left;
+    
+}
+.atv, .str{
+    color: #05AE0E;
+}
+.tag, .pln, .kwd{
+    color: #3472F7;
+}
+.atn{
+    color: #2C93FF;
+}
+.pln{
+    color: #333;
+}
+.com{
+    color: #999;
+}
+.space-top{
+    margin-top: 50px;
+}
+.btn-primary .caret{
+    border-top-color: #3472F7;
+    color: #3472F7;
+}
+
+    .back_img{
+        background-image : url("{% static "img/back.jpeg" %}");
+        background-repeat : no-repeat;
+        background-size : cover;
+        width : 100%;
+        height : 700px;
+
+    }
+
+    .login_back {
+        {% comment %} background: #f8f8f8; {% endcomment %}
+        padding: 90px 20px;
+    }
+    .gradtext {
+        background: #ff4d00;
+        background: -webkit-linear-gradient(left, #ffbf00, #ff4d00);
+        background:    -moz-linear-gradient(right, #ffbf00, #ff4d00);
+        background:      -o-linear-gradient(right, #ffbf00, #ff4d00);
+        background:         linear-gradient(to right, #ffbf00, #ff4d00);
+        -webkit-background-clip: text;
+                background-clip: text;
+        color: transparent;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #login-form > div {
+        margin: 15px 0;
+    }
+
+   
+    textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
+        font-size : 14px;
+        border-color: rgba(229, 103, 23, 0.8);
+        box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+        outline: 0 none;
+    }
+
+
+</style>
+
+
+<body style="font-size : 13px;">
+
+
+    {% load static %}
+    <!-- 카카오톡 로그인 로드함 -->
+    {% load socialaccount %}
+    {% providers_media_js %}
+    
+    <!-- 현재 들어온 유저가 로그인된 상태면 -->
+    {% if user.is_authenticated %}
+
+        
+    <div id="navbar-full">
+    <div class="container">
+    <span class="gradtext" style="float : left;">APPLEMANGO</span>
+             <form id="logout" method="POST" action="{% url 'logout' %}" style="float : right;">
+            {% csrf_token %}
+            <input type="submit" class="form-control btn btn-warning" style="color : white; font-size : 14px; margin : 10px;" value="로그아웃"/>
+        </form>
+   
+    </div><!--  end container-->
+    
+    <div class='blurred-container' style="height : 350px;">
+        <div class="motto">
+            <image src="https://i.stack.imgur.com/AIQ61.png" style="width: 100px; height:100px; border-radius : 50px; border: 1px solid white;"/>
+            
+            <h2 style="text-decoration: underline;">{{user.username }}</h2>
+            {% endif %}
+            <p>간단한 소개를 입력하시오</p>
+            {% comment %} 사용자 아이콘 {% endcomment %}
+            {% comment %} 사용자 명 {% endcomment %}
+            {% comment %} 사용자 소개 {% endcomment %}
+            
+        </div>
+        {% comment %} <div class="img-src" style="background-image: url({% static "img/back.jpeg" %})"></div> {% endcomment %}
+        <div class="img-src img-blurred" style="background-image: url({% static "img/back.jpeg" %}); height : 100%;"></div>
+    </div>
+</div>
+<div class="main">
+    <ul>
+    <li><a  href="{% url 'home' %}">예약하기</a></li>
+    <li><a  href="{% url 'diary' %}">다이어리</a></li>
+    <li><a href="{% url 'verification' %}">인증하기</a></li>
+    {% comment %} <li><a href="">인증</a></li> {% endcomment %}
+    <li style="float:right"><a class="active" href="{ % url 'chart' %}">통계</a></li>
+    </ul>
+    <div class="container tim-container">
+    <br/>
+    <br/>
+    <span class="gradtext">통계</span>
+    <br/>
+    <br/>
+        {% if error %}
+        {{ error }}
+        {% endif %}
+        
+<div class="wrapper ">
+    <div class="main-panel" id="main-panel">
+      <div class="content">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">집중불안과 우울증</h4>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                    <image src='{% static "chart/images/fig_anxi.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">귀찮음과 우울증</h4>
+                
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <image src='{% static "chart/images/fig_bother.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">본인능력판단과 우울증</h4>
+                
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <image src='{% static "chart/images/fig_capa.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">타인에게 느끼는 차가운 대우와 우울증</h4>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <image src='{% static "chart/images/fig_cold.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">갑작스런 울음과 우울증</h4>
+                
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <image src='{% static "chart/images/fig_cry.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">울적한 기분과 우울증</h4>
+                
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                 <image src='{% static "chart/images/fig_depr.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">인생을 실패작이라 여기는 정도와 우울증</h4>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <image src='{% static "chart/images/fig_fail.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">두려움과 우울증</h4>
+                
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                 <image src='{% static "chart/images/fig_fear.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">즐거운 생활과 우울증</h4>
+                
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <image src='{% static "chart/images/fig_fun.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">우울과 우울증</h4>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                 <image src='{% static "chart/images/fig_glo.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">행복감과 우울증</h4>
+                
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <image src='{% static "chart/images/fig_hap.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">힘들다고 느끼는 감정과 우울증</h4>
+                
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <image src='{% static "chart/images/fig_hard.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">타인이 나를 싫어한다고 느끼는 정도와 우울증</h4>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                <image src='{% static "chart/images/fig_hate.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">미래희망적인 생각과 우울증</h4>
+                
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                 <image src='{% static "chart/images/fig_hope.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">잠설침과 우울증</h4>
+                
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                <image src='{% static "chart/images/fig_inso.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">입맛없는 정도와 우울증</h4>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <image src='{% static "chart/images/fig_noeat.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">말수가 줄은 정도와 우울증</h4>
+                
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <image src='{% static "chart/images/fig_qui.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">슬픔과 우울증</h4>
+                
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <image src='{% static "chart/images/fig_sad.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category"></h5>
+                <h4 class="card-title">시작한 기운이 없는 정도와 우울증</h4>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <image src='{% static "chart/images/fig_tor.png" %}' style="width : 300px;"/>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {% comment %} <div class="col-lg-4 col-md-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category">2018 Sales</h5>
+                <h4 class="card-title">All products</h4>
+                
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <canvas id="lineChartExampleWithNumbersAndGrid"></canvas>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category">2018 Sales</h5>
+                <h4 class="card-title">All products</h4>
+                
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <canvas id="lineChartExampleWithNumbersAndGrid"></canvas>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr /> {% endcomment %}
+
+        
+    </div>
+
+    
+    
+    </div>
+
+
+</div>
+        
+    </div>
+    </div>
+    </div>
+   
+                   
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

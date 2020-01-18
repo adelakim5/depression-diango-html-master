@@ -1,0 +1,14 @@
+   <!-- 내가 저장한 다이어리 제목이랑 내용 나오나 확인 -->
+
+   {% if user.is_authenticated %}
+
+   {% for diary in diarys %}
+
+   다이어리 제목: {{diary.title}}
+   다이어리 감정: {{diary.emotion}}
+   <a href="{% url 'diary_detail' diary.pk %}">자세히</a>
+   <br>
+
+   {% endfor %}
+   <!-- 확인 완료 -->
+   {% endif %}
