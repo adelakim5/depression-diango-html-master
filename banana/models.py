@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 # Create your models here.
     
@@ -39,6 +40,7 @@ class Reserve(models.Model):
     diary_open = models.CharField(max_length=3,choices=DIARY, default='yes')
     center_exp = models.CharField(max_length=3,choices=CENTER_EXP, default='no')
     about = models.TextField()
+    date = models.DateTimeField(default=timezone.now)
     
 class Additional(models.Model):
     SCHOOL=[
@@ -60,6 +62,7 @@ class Additional(models.Model):
     marriage = models.CharField(max_length=3, null=True, blank=True)
     child = models.CharField(max_length=3, null=True, blank=True)
     child_num = models.CharField(max_length=10, null=True, default='0')
+    date = models.DateTimeField(default=timezone.now)
     
     
 class Diary(models.Model):
@@ -72,7 +75,7 @@ class Diary(models.Model):
         ('기타', '기타'),
     ]
     title = models.CharField(max_length=100)
-    date = models.DateTimeField('date published')
+    date = models.DateTimeField(default=timezone.now)
     situation = models.TextField(default="")
     emotion = models.CharField(max_length=3, choices=EMOTION, default='기쁨')
     other = models.CharField(max_length=100, default='', null=True, blank=True)
